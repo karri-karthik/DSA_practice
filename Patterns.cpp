@@ -216,7 +216,36 @@
 
 
 // 9 
+// alphabet reverse triangle pattern.
 
+// #include <iostream>
+// using namespace std;
+
+// class Solution{
+//     public:
+//         void patterns (int n){
+//             for(int i = 0 ; i < n; i++){
+//                 for(char ch = 'A' + i; ch >= 'A'; ch--){
+//                     cout << ch << ' ';
+
+//                 }
+//                 cout << endl;
+//             }
+
+//         }};
+
+// int main(){
+//     char ch;
+//     int n;
+//     cin >> n;
+
+//     Solution kar;
+//     kar.patterns(n);
+// }
+
+
+//10 
+// inverted triangle pattern 
 
 #include <iostream>
 using namespace std;
@@ -225,18 +254,24 @@ class Solution{
     public:
         void patterns (int n){
             for(int i = 0 ; i < n; i++){
-                for(int j = i +1 ; j >0; j--){
-                    cout << j << ' ';
-                }
-                cout << endl;
+               for(int j = 0; j <i; j++){  // space
+                cout << " ";
+               }
+               for(int j = 0; j < n- i; j++){ // number
+                cout << (i+1);
+                
+               }
+               cout <<endl;
             }
 
         }};
 
 int main(){
+    
     int n;
     cin >> n;
 
     Solution kar;
     kar.patterns(n);
 }
+
