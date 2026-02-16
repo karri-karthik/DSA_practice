@@ -81,25 +81,64 @@
 //     }
 // }
 
-// Front 
+// // Front 
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> kar;       // delete last element
+    
+//     kar.push_back(35);
+//     kar.push_back(45);
+//     kar.push_back(105);
+//     kar.push_back(4);
+//     kar.pop_back();      // it deletes last element 45
+
+    
+//     cout << kar.size() << endl;
+//     cout << kar.capacity() << endl;  // add double size if it full
+//     cout << kar.front() << endl;   // print first element
+//     cout << kar.back() << endl;  // print last element
+//     cout << kar.at(2) << endl;  // index value
+// }
+
+
+
+// ** Pair Sum
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int main(){
-    vector<int> kar;       // delete last element
-    
-    kar.push_back(35);
-    kar.push_back(45);
-    kar.push_back(105);
-    kar.push_back(4);
-    kar.pop_back();      // it deletes last element 45
+vector<int> pairSum(vector<int> nums,int target){
+    vector<int> ans;
+    int n = nums.size();
+    int i = 0, j = n-1;
+    while(i < j){
+        int pairSum = nums[i] + nums[j];
+        if(pairSum > target){
+            j--;
+        }
+        else if(pairSum < target){
+            i++;
+        }
+        else{
+            ans.push_back(i);
+            ans.push_back(j);
+            return ans;
+        }
 
-    
-    cout << kar.size() << endl;
-    cout << kar.capacity() << endl;  // add double size if it full
-    cout << kar.front() << endl;   // print first element
-    cout << kar.back() << endl;  // print last element
-    cout << kar.at(2) << endl;  // index value
+    }
+    return ans;
+}
+
+int main(){
+    vector<int> nums = {2,54,65,89,91};
+    int target = 180;
+
+    vector<int> ans = pairSum(nums, target);
+    cout << ans[0] << " " << ans[1] <<endl;
+
 }
