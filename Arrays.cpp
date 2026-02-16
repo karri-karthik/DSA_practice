@@ -188,4 +188,27 @@
 // Remove dulipacrtes in array
 
 #include <bits/stdc++.h>
+using namespace std;
 
+int removeDuli(int arr[], int n){
+    if (n == 0){
+        return 0;
+
+    }
+    int i = 0;
+
+    for(int j = 1; j<n; j++){
+        if(arr[i] != arr[j]){
+            i++;
+            arr[i] =arr[j];
+        }
+    } 
+    return i+1;
+}
+
+int main(){
+    int arr[] = {5,6,8,8,0,9,9,9};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int newsize = removeDuli(arr,n);
+    cout << "no.of unique elements: " << newsize <<endl;
+}
