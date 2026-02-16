@@ -126,13 +126,66 @@
 
 // time complexity O(N)
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-class Slargest{
-public:
-    void secLargrstnum(int arr[], int n){
+// class Slargest{
+// public:
+//     int secLargrstnum(int a[], int n){
+//         int largest = a[0];
+//         int seclargest = -1;
+//         for(int i = 0; i < n; i++){
+//             if(a[i] > largest){
+//                 seclargest = largest;
+//                 largest = a[i];
+                
+//             }
+//             else if(largest > a[i] && a[i] > seclargest){
+//                 seclargest = a[i];
+//             }
+//         }
+//         return seclargest;
+
+//     }
+// };
+
+// int main(){
+//     int a[] = {4,5,6,8,9};
+//     int n = 5;
+
+//     Slargest obj;
+//     cout << obj.secLargrstnum(a, n);
+
+// }
+
+
+// Linear Search 
+//Time complexity: O(n)
+//space complexity: O(1)
+
+// #include <bits/stdc++.h>
+
+// int linearSearch(int arr[], int n, int num){
+//     for(int i = 0 ; i < n; i++){
+//         if(arr[i] == num){
+//             return i;
+//         }
         
+//     }
+//     return -1;
 
-    }
-}
+// }
+
+// int main(){
+//     int arr[] = {7,8,9,5,6};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     int num = 0;
+//     int val = linearSearch(arr, n, num);
+//     printf("%d",val);
+// }
+
+
+// Remove dulipacrtes in array
+
+#include <bits/stdc++.h>
+
