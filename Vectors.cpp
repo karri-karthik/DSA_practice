@@ -64,3 +64,42 @@
 
 // pop_back 
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> kar;       // delete last element
+    
+//     kar.push_back(35);
+//     kar.push_back(45);
+//     kar.pop_back();      // it deletes last element 45
+//     cout << kar.size() << endl;
+//     cout << kar.capacity() << endl;  // add double size if it full
+//     for (int i : kar){
+//         cout << i << " ";
+//     }
+// }
+
+// Front 
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+    vector<int> kar;       // delete last element
+    
+    kar.push_back(35);
+    kar.push_back(45);
+    kar.push_back(105);
+    kar.push_back(4);
+    kar.pop_back();      // it deletes last element 45
+
+    
+    cout << kar.size() << endl;
+    cout << kar.capacity() << endl;  // add double size if it full
+    cout << kar.front() << endl;   // print first element
+    cout << kar.back() << endl;  // print last element
+    cout << kar.at(2) << endl;  // index value
+}
